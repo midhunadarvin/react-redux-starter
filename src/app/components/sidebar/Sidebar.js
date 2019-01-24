@@ -47,7 +47,7 @@ export class AppSidebar extends React.Component {
 }
 
 const mapStateToProps = state => {
-	return { 'menuItems': state.menuItems };
+	return { 'menuItems': state.sidebarReducer.menuItems };
 };
 
 const mapDispatchToProps = dispatch => {
