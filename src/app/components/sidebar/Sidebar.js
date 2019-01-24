@@ -29,10 +29,10 @@ export class AppSidebar extends React.Component {
 
 								</ListGroupItem>
 								{
-									item.active && <div>
+									item.active && item.children && item.children.length && <div>
 										{
-											item.children && item.children.map((subitem, i) => {
-												return <ListGroupItem key={i} action>{subitem.name}</ListGroupItem>;
+											item.children && item.children.map((subitem, childIndex) => {
+												return <ListGroupItem key={childIndex} action>{subitem.name}</ListGroupItem>;
 											})
 										}
 									</div>
