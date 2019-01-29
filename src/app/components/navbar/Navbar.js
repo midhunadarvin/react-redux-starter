@@ -40,7 +40,7 @@ export default class AppNavbar extends React.Component {
 								<DropdownToggle nav caret>
 									Options
 								</DropdownToggle>
-								<DropdownMenu >
+								<DropdownMenu right>
 									<DropdownItem>
 										Option 1
 									</DropdownItem>
@@ -53,6 +53,7 @@ export default class AppNavbar extends React.Component {
 									</DropdownItem>
 								</DropdownMenu>
 							</UncontrolledDropdown>
+
 							<NavItem>
 								<NavLink href="/components/">Components</NavLink>
 							</NavItem>
