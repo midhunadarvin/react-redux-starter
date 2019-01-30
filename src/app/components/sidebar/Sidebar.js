@@ -9,39 +9,81 @@ export class AppSidebar extends React.Component {
 		this.props.toggleMenuItem(item);
 	}
 
+	getActiveClass(item) {
+		return item.active
+			? 'show'
+			: 'hidden';
+	}
+
 	render() {
 		return (
-			<Nav className="col-sm-3 col-md-2 hidden-xs-down bg-faded sidebar">
-				<ListGroup className="nav nav-pills flex-column w-100">
-					{
-						this.props.menuItems.map((item, index) => {
-							return <div key={index}>
-								<ListGroupItem action onClick={() => this.openMenu(item)}>
-									<i className={'fa fa-' + item.icon}></i>
-									<span className="hidden-sm-down pl-3">{item.name}</span>
-									{
-										item.children &&
+			<nav id="sidebar">
+				<div className="sidebar-header">
+					<h3>Bootstrap Sidebar</h3>
+				</div>
+
+				<ul className="list-unstyled components">
+				{
+					this.props.menuItems.map((item, index) => {
+						return (
+							<li key={index} onClick={() => this.openMenu(item)} className="list-group-item">
+								<a data-toggle="collapse" aria-expanded="false" className="dropdown-toggle">
+									{item.name}
+									{ item.children && item.children.length &&
 										<span>
 											{item.active && <i className="fa fa-angle-down pull-right arrow-icon"></i>}
 											{!item.active && <i className="fa fa-angle-right pull-right arrow-icon"></i>}
 										</span>
 									}
-
-								</ListGroupItem>
-								{
-									item.active && item.children && item.children.length && <div>
+								</a>
+								{ item.active && item.children && item.children.length &&
+									<ul className={'collapse list-unstyled ' + this.getActiveClass(item)}>
 										{
 											item.children && item.children.map((subitem, childIndex) => {
-												return <ListGroupItem key={childIndex} action>{subitem.name}</ListGroupItem>;
+												return (
+													<li key={childIndex}>
+														<a href="#">{subitem.name}</a>
+													</li>
+												);
 											})
 										}
-									</div>
+									</ul>
 								}
-							</div>;
-						})
-					}
-				</ListGroup>
-			</Nav>
+							</li>
+						);
+					})
+				}
+				</ul>
+			</nav>
+			// <ul class="col-md-2 pr-0 nav flex-column list-group position-absolute">
+			// 	{
+			// 		this.props.menuItems.map((item, index) => {
+			// 			return (
+			// 				<li key={index} class="list-group-item" onClick={() => this.openMenu(item)}>
+			// 					<span className="hidden-sm-down pl-3">{item.name}</span>
+									// {
+									// 	item.children &&
+										// <span>
+										// 	{item.active && <i className="fa fa-angle-down pull-right arrow-icon"></i>}
+										// 	{!item.active && <i className="fa fa-angle-right pull-right arrow-icon"></i>}
+										// </span>
+									// }
+
+									// {
+									// 	item.active && item.children && item.children.length &&
+									// 	<div class="list-group">
+									// 		{
+									// 			item.children && item.children.map((subitem, childIndex) => {
+									// 				return <li key={childIndex} class="list-group-item">{subitem.name}</li>;
+									// 			})
+									// 		}
+									// 	</div>
+									// }
+			// 				</li>
+			// 			);
+			// 		})
+			// 	}
+			// </ul>
 		);
 	}
 }

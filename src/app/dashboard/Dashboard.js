@@ -8,42 +8,43 @@ import { Route, Switch, Redirect } from 'react-router';
 import './Dashboard.css';
 
 export class Dashboard extends React.Component {
-	render() {
-		return (
-            <div>
-                <AppNavbar></AppNavbar>
-                <div className="container-fluid ">
-                    <div className="row">
-                        <AppSidebar></AppSidebar>
-                        <main className="col-sm-9 offset-sm-3 col-md-10 offset-md-2 pt-3">
-                            <div className="col">
-                                <nav aria-label="breadcrumb">
-                                    <ol class="breadcrumb">
-                                        <li class="breadcrumb-item"><a href="#">Home</a></li>
-                                        <li class="breadcrumb-item"><a href="#">Library</a></li>
-                                        <li class="breadcrumb-item active" aria-current="page">Data</li>
-                                    </ol>
-                                </nav>
-                            </div>
-                            <Switch>
-                                <Route path="/home" render={() => <Home />}/>
-                                <Route path="/reports" render={() => <Reports />} />
-                                <Redirect from="/" to="/home"/>
-                            </Switch>
-                        </main>
+    render() {
+        return (
+            <div className="wrapper">
+                <AppSidebar></AppSidebar>
+                <div className="container-fluid p-0">
+                    <AppNavbar></AppNavbar>
+                    <div className="container-fluid pt-3">
+                        <div className="row">
+                                <div className="col">
+                                    <nav aria-label="breadcrumb">
+                                        <ol className="breadcrumb">
+                                            <li className="breadcrumb-item"><a href="#">Home</a></li>
+                                            <li className="breadcrumb-item"><a href="#">Library</a></li>
+                                            <li className="breadcrumb-item active" aria-current="page">Data</li>
+                                        </ol>
+                                    </nav>
+                                    <Switch>
+                                        <Route path="/home" render={() => <Home />} />
+                                        <Route path="/reports" render={() => <Reports />} />
+                                        <Redirect from="/" to="/home" />
+                                    </Switch>
+                                </div>
+                                
+                        </div>
                     </div>
                 </div>
             </div>
-		);
-	}
+        );
+    }
 }
 
 const mapStateToProps = state => {
-	return {};
+    return {};
 };
 
 const mapDispatchToProps = dispatch => {
-	return {};
+    return {};
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(Dashboard);

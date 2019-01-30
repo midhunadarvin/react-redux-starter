@@ -1,3 +1,7 @@
 .arrow-icon {
     font-size: 1.4em;
 }
+
+#sidebar .list-group-item {
+  box-shadow: none;
+}
