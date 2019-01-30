@@ -12,27 +12,26 @@ export class Dashboard extends React.Component {
         return (
             <div className="wrapper">
                 <AppSidebar></AppSidebar>
-                <div className="container-fluid p-0">
+                <div className="content-wrapper container-fluid p-0 mh-100">
                     <AppNavbar></AppNavbar>
                     <div className="container-fluid pt-3">
                         <div className="row">
-                                <div className="col">
-                                    <nav aria-label="breadcrumb">
-                                        <ol className="breadcrumb">
-                                            <li className="breadcrumb-item"><a href="#">Home</a></li>
-                                            <li className="breadcrumb-item"><a href="#">Library</a></li>
-                                            <li className="breadcrumb-item active" aria-current="page">Data</li>
-                                        </ol>
-                                    </nav>
-                                    <Switch>
-                                        <Route path="/home" render={() => <Home />} />
-                                        <Route path="/reports" render={() => <Reports />} />
-                                        <Redirect from="/" to="/home" />
-                                    </Switch>
-                                </div>
-                                
+                            <div className="col">
+                                <nav aria-label="breadcrumb">
+                                    <ol className="breadcrumb">
+                                        <li className="breadcrumb-item"><a href="#">Home</a></li>
+                                        <li className="breadcrumb-item"><a href="#">Library</a></li>
+                                        <li className="breadcrumb-item active" aria-current="page">Data</li>
+                                    </ol>
+                                </nav>
+                            </div>
                         </div>
                     </div>
+                    <Switch>
+                        <Route path="/home" render={() => <Home />} />
+                        <Route path="/reports" render={() => <Reports />} />
+                        <Redirect from="/" to="/home" />
+                    </Switch>
                 </div>
             </div>
         );

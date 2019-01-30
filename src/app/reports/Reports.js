@@ -5,9 +5,13 @@ import './Reports.css';
 export class Reports extends React.Component {
 	render() {
 		return (
-            <div>
-                Reports
-            </div>
+			<div className="container-fluid pb-4">
+				<div className="row">
+					<div className="col">
+						<h1>Reports Page</h1>
+					</div>
+				</div>
+			</div>
 		);
 	}
 }
