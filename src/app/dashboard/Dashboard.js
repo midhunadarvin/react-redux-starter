@@ -5,6 +5,7 @@ import AppSidebar from '../components/sidebar/Sidebar';
 import Home from '../home/Home';
 import Reports from '../reports/Reports';
 import { Route, Switch, Redirect } from 'react-router';
+import { withRouter } from 'react-router-dom';
 import './Dashboard.css';
 
 export class Dashboard extends React.Component {
@@ -46,5 +47,5 @@ const mapDispatchToProps = dispatch => {
     return {};
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(Dashboard);
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Dashboard));
 

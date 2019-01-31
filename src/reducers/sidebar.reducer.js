@@ -5,7 +5,8 @@ const initialState = {
 		{
 			'name': 'Home',
 			'icon': 'dashboard',
-			'path': '/'
+			'path': '/',
+			'active': true
 		},
 		{
 			'name': 'Overview',
@@ -45,7 +46,8 @@ export const sidebarReducer = (state = initialState, action) => {
 					element.active = !element.active;
 				} else {
 					element.active = false;
-				};
+				}
+
 				return element;
 			});
 
