@@ -1,4 +1,4 @@
-import { ADD_MENU_ITEM, TOGGLE_MENU } from '../constants/action-types';
+import { ADD_MENU_ITEM, TOGGLE_MENU, TOGGLE_SIDEBAR } from '../constants/action-types';
 
 const initialState = {
 	'menuItems': [
@@ -30,7 +30,8 @@ const initialState = {
 			'name': 'Analytics',
 			'icon': 'th'
 		}
-	]
+	],
+	sidebarActive: false
 };
 
 export const sidebarReducer = (state = initialState, action) => {
@@ -55,6 +56,12 @@ export const sidebarReducer = (state = initialState, action) => {
 				...state,
 				'menuItems': [...menu]
 			};
+		}
+		case TOGGLE_SIDEBAR: {
+			return {
+				...state,
+				sidebarActive: !state.sidebarActive
+			}
 		}
 		default:
 			return state;

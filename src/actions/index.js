@@ -1,4 +1,4 @@
-import { ADD_MENU_ITEM, TOGGLE_MENU } from '../constants/action-types';
+import { ADD_MENU_ITEM, TOGGLE_MENU, TOGGLE_SIDEBAR } from '../constants/action-types';
 
 export const addMenuItem = menuItem => ({
 	'type': ADD_MENU_ITEM,
@@ -8,4 +8,9 @@ export const addMenuItem = menuItem => ({
 export const toggleMenuItem = menuItem => ({
 	'type': TOGGLE_MENU,
 	'payload': menuItem
+});
+
+export const toggleSidebar = () => ({
+	'type': TOGGLE_SIDEBAR,
+	'payload': {}
 });

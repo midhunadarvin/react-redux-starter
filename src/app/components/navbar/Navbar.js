@@ -1,7 +1,10 @@
 import React from 'react';
+import { connect } from 'react-redux';
+import { withRouter } from 'react-router-dom';
+import { toggleSidebar } from '../../../actions';
 import './Navbar.css';
 
-export default class AppNavbar extends React.Component {
+class AppNavbar extends React.Component {
 	constructor(props) {
 		super(props);
 
@@ -19,10 +22,12 @@ export default class AppNavbar extends React.Component {
 		return (
 			<div>
 				<nav className="navbar navbar-expand-lg navbar-dark bg-dark">
-					<a className="navbar-brand" href="#">Navbar</a>
-					<button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+					<button type="button" id="sidebarCollapse" className="btn btn-outline-success" onClick={this.props.toggleSidebar}>
 						<span className="navbar-toggler-icon"></span>
 					</button>
+					<a className="navbar-brand" href="#">Navbar</a>
+
+
 
 					<div className="collapse navbar-collapse" id="navbarSupportedContent">
 						<ul className="navbar-nav mr-auto">
@@ -57,3 +62,15 @@ export default class AppNavbar extends React.Component {
 		);
 	}
 }
+
+const mapStateToProps = state => {
+	return {};
+};
+
+const mapDispatchToProps = dispatch => {
+	return {
+		'toggleSidebar': () => dispatch(toggleSidebar())
+	};
+};
+
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(AppNavbar));

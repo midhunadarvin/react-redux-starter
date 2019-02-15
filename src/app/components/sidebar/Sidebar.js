@@ -1,7 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
-import { push } from 'connected-react-router';
 import { toggleMenuItem } from '../../../actions/index';
 import './Sidebar.css';
 
@@ -22,7 +21,7 @@ export class AppSidebar extends React.Component {
 
 	render() {
 		return (
-			<nav id="sidebar">
+			<nav id="sidebar" className={this.props.sidebarActive ? 'active' : ''}>
 				<div className="sidebar-header">
 					<h3>Bootstrap Sidebar</h3>
 				</div>
@@ -65,7 +64,10 @@ export class AppSidebar extends React.Component {
 }
 
 const mapStateToProps = state => {
-	return { 'menuItems': state.sidebarReducer.menuItems };
+	return { 
+		'menuItems': state.sidebarReducer.menuItems,
+		'sidebarActive': state.sidebarReducer.sidebarActive
+	};
 };
 
 const mapDispatchToProps = dispatch => {
