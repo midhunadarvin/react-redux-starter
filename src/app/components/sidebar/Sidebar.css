@@ -7,10 +7,11 @@
 }
 
 #sidebar {
-  border: 1px solid #000;
-  min-width: 250px;
-  max-width: 250px;
   min-height: 100vh;
+}
+
+#sidebar .list-group-item:hover {
+  background-color: #F5F5F5;
 }
 
 #sidebar.active {

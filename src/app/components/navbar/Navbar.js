@@ -22,12 +22,8 @@ class AppNavbar extends React.Component {
 		return (
 			<div>
 				<nav className="navbar navbar-expand-lg navbar-dark bg-dark">
-					<button type="button" id="sidebarCollapse" className="btn btn-outline-success" onClick={this.props.toggleSidebar}>
-						<span className="navbar-toggler-icon"></span>
-					</button>
+					<span className="navbar-toggler-icon" onClick={this.props.toggleSidebar}></span>
 					<a className="navbar-brand" href="#">Navbar</a>
-
-
 
 					<div className="collapse navbar-collapse" id="navbarSupportedContent">
 						<ul className="navbar-nav mr-auto">
