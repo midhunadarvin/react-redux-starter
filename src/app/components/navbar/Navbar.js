@@ -21,7 +21,7 @@ class AppNavbar extends React.Component {
 	render() {
 		return (
 			<div>
-				<nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+				<nav className="navbar navbar-expand-lg">
 					<span className="navbar-toggler-icon" onClick={this.props.toggleSidebar}></span>
 					<a className="navbar-brand" href="#">Navbar</a>
 
