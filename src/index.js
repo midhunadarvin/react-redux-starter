@@ -1,3 +1,4 @@
+import 'babel-polyfill';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
@@ -14,7 +15,7 @@ import { ConnectedRouter } from 'connected-react-router';
 
 import App from './app/App';
 import registerServiceWorker from './registerServiceWorker';
-
+import { fetchPosts } from './actions';
 ReactDOM.render(
 	<Provider store={store}>
 		<ConnectedRouter history={history}>
@@ -26,3 +27,4 @@ ReactDOM.render(
 	document.getElementById('root')
 );
 registerServiceWorker();
+store.dispatch(fetchPosts('reactjs')).then(() => console.log(store.getState()))

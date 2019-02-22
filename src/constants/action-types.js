@@ -1,3 +1,5 @@
 export const ADD_MENU_ITEM = 'ADD_MENU_ITEM';
 export const TOGGLE_MENU = 'TOGGLE_MENU';
 export const TOGGLE_SIDEBAR = 'TOGGLE_SIDEBAR';
+export const REQUEST_POSTS = 'REQUEST_POSTS';
+export const RECEIVE_POSTS = 'RECEIVE_POSTS';

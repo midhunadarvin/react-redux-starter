@@ -13,8 +13,7 @@
         "sourceType": "module"
     },
     "plugins": [
-        "react",
-        "jsx-a11y"
+        "react"
     ],
     "rules": {
         "accessor-pairs": "error",
@@ -255,7 +254,6 @@
         "yoda": [
             "error",
             "never"
-        ],
-        "jsx-a11y/anchor-is-valid": false
+        ]
     }
 }

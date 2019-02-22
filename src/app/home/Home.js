@@ -15,7 +15,7 @@ export class Home extends React.Component {
 							<div className="container">
 								<h1 className="display-3">Hello, world!</h1>
 								<p>This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
-								<p><a className="btn btn-primary btn-lg" href="#" role="button">Learn more »</a></p>
+								<p><a href="#/" className="btn btn-primary btn-lg" role="button">Learn more »</a></p>
 							</div>
 						</div>
 					</div>
@@ -32,7 +32,6 @@ export class Home extends React.Component {
 								<button className="btn btn-primary">Go somewhere</button>
 							</div>
 						</div>
-						
 					</div>
 					<div className="col col-md-4 col-sm-3 mb-3">
 						<div className="card">
@@ -42,7 +41,7 @@ export class Home extends React.Component {
 							<div className="card-body">
 								<h5 className="card-title">Card title</h5>
 								<p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-								<a href="#" className="btn btn-primary">Go somewhere</a>
+								<a href="#/" className="btn btn-primary">Go somewhere</a>
 							</div>
 						</div>
 					</div>
@@ -55,7 +54,7 @@ export class Home extends React.Component {
 							<div className="card-body">
 								<h5 className="card-title">Card title</h5>
 								<p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-								<a href="#" className="btn btn-primary">Go somewhere</a>
+								<a href="#/" className="btn btn-primary">Go somewhere</a>
 							</div>
 						</div>
 					</div>
@@ -68,7 +67,7 @@ export class Home extends React.Component {
 							<div className="card-body">
 								<h5 className="card-title">Card title</h5>
 								<p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-								<a href="#" className="btn btn-primary">Go somewhere</a>
+								<a href="#/" className="btn btn-primary">Go somewhere</a>
 							</div>
 						</div>
 					</div>
@@ -80,7 +79,7 @@ export class Home extends React.Component {
 							<div className="card-body">
 								<h5 className="card-title">Card title</h5>
 								<p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-								<a href="#" className="btn btn-primary">Go somewhere</a>
+								<a href="#/" className="btn btn-primary">Go somewhere</a>
 							</div>
 						</div>
 					</div>
